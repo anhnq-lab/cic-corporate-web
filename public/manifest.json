@@ -1,0 +1,27 @@
+{
+  "name": "CIC - Giải Pháp Phần Mềm Chuyên Ngành Xây Dựng",
+  "short_name": "CIC",
+  "description": "Hệ sinh thái 45+ phần mềm chuyên ngành xây dựng, giao thông, thuỷ lợi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0D14",
+  "theme_color": "#F97316",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "vi",
+  "dir": "ltr"
+}

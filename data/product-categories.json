@@ -1,0 +1,100 @@
+[
+  {
+    "id": 62,
+    "name": "Xây dựng",
+    "alias": "xay-dung",
+    "ordering": 1,
+    "image": null
+  },
+  {
+    "id": 63,
+    "name": "Giao thông",
+    "alias": "giao-thong",
+    "ordering": 2,
+    "image": null
+  },
+  {
+    "id": 64,
+    "name": "Thuỷ lợi",
+    "alias": "thuy-loi",
+    "ordering": 3,
+    "image": null
+  },
+  {
+    "id": 65,
+    "name": "Dầu khí",
+    "alias": "dau-khi",
+    "ordering": 4,
+    "image": null
+  },
+  {
+    "id": 66,
+    "name": "Môi trường",
+    "alias": "moi-truong",
+    "ordering": 5,
+    "image": null
+  },
+  {
+    "id": 67,
+    "name": "Cơ khí chế tạo",
+    "alias": "co-khi-che-tao",
+    "ordering": 6,
+    "image": null
+  },
+  {
+    "id": 68,
+    "name": "Giáo dục & Đào tạo",
+    "alias": "giao-duc-dao-tao",
+    "ordering": 7,
+    "image": null
+  },
+  {
+    "id": 70,
+    "name": "An ninh & Quân sự",
+    "alias": "an-ninh-quan-su",
+    "ordering": 8,
+    "image": null
+  },
+  {
+    "id": 69,
+    "name": "Khác",
+    "alias": "khac",
+    "ordering": 1000,
+    "image": null
+  },
+  {
+    "id": 80,
+    "name": "Nội thất & VLXD",
+    "alias": "noi-that-vat-lieu-xay-dung",
+    "ordering": 1001,
+    "image": null
+  },
+  {
+    "id": 81,
+    "name": "Điện lực",
+    "alias": "dien-luc",
+    "ordering": 1002,
+    "image": null
+  },
+  {
+    "id": 82,
+    "name": "Mỏ & Khai khoáng",
+    "alias": "mo-khai-khoang",
+    "ordering": 1003,
+    "image": null
+  },
+  {
+    "id": 83,
+    "name": "Văn phòng",
+    "alias": "van-phong",
+    "ordering": 1004,
+    "image": null
+  },
+  {
+    "id": 84,
+    "name": "Địa vật lý",
+    "alias": "dia-vat-ly",
+    "ordering": 1005,
+    "image": null
+  }
+]

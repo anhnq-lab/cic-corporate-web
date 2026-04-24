@@ -1,0 +1,39 @@
+/* Custom Animations */
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base Reveal Class */
+.reveal-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visibility State */
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Delays (Optional) */
+.reveal-delay-100 {
+    transition-delay: 100ms;
+}
+
+.reveal-delay-200 {
+    transition-delay: 200ms;
+}
+
+.reveal-delay-300 {
+    transition-delay: 300ms;
+}
