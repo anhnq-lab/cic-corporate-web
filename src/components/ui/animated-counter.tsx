@@ -13,7 +13,7 @@ interface AnimatedCounterProps {
 
 function useCounter(end: number, duration: number, start: boolean) {
   const [current, setCurrent] = useState(0);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number>(0);
 
   useEffect(() => {
     if (!start) return;

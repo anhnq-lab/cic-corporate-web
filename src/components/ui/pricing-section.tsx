@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Check, X, ArrowRight, Info } from "lucide-react";
 import {
   Tooltip,
@@ -132,14 +132,12 @@ function PricingCalculator() {
         </span>
         <button
           onClick={() => setPeriod(period === "monthly" ? "yearly" : "monthly")}
-          className={`relative w-12 h-6 rounded-full transition-colors ${
-            period === "yearly" ? "bg-accent" : "bg-muted"
-          }`}
+          className={`relative w-12 h-6 rounded-full transition-colors ${period === "yearly" ? "bg-accent" : "bg-muted"
+            }`}
         >
           <span
-            className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white transition-transform ${
-              period === "yearly" ? "translate-x-6" : ""
-            }`}
+            className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white transition-transform ${period === "yearly" ? "translate-x-6" : ""
+              }`}
           />
         </button>
         <span className={`text-sm ${period === "yearly" ? "text-foreground" : "text-muted-foreground"}`}>
@@ -171,11 +169,10 @@ function PricingCalculator() {
             <button
               key={mod.id}
               onClick={() => toggleModule(mod.id)}
-              className={`px-3 py-2 rounded-lg text-sm text-left transition-all ${
-                modules.includes(mod.id)
-                  ? "bg-accent/10 border-accent text-accent border"
-                  : "bg-muted/30 border-border/40 border text-muted-foreground hover:border-border/60"
-              }`}
+              className={`px-3 py-2 rounded-lg text-sm text-left transition-all ${modules.includes(mod.id)
+                ? "bg-accent/10 border-accent text-accent border"
+                : "bg-muted/30 border-border/40 border text-muted-foreground hover:border-border/60"
+                }`}
             >
               <div className="font-medium">{mod.name}</div>
               <div className="text-xs opacity-70">
@@ -199,12 +196,10 @@ function PricingCalculator() {
             </div>
           </div>
         </div>
-        <Button className="w-full bg-accent text-white hover:bg-accent/90 rounded-full" asChild>
-          <a href="/lien-he">
-            Nhận báo giá chi tiết
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
-        </Button>
+        <a href="/lien-he" className={buttonVariants({ variant: "default", className: "w-full bg-accent text-white hover:bg-accent/90 rounded-full" })}>
+          Nhận báo giá chi tiết
+          <ArrowRight className="w-4 h-4 ml-2" />
+        </a>
       </div>
     </div>
   );
@@ -236,11 +231,10 @@ export function PricingSection() {
               <motion.div
                 key={plan.id}
                 whileHover={{ y: -4 }}
-                className={`rounded-2xl border p-6 flex flex-col ${
-                  plan.popular
-                    ? "border-accent bg-accent/5 shadow-lg shadow-accent/10"
-                    : "border-border/60 bg-card"
-                }`}
+                className={`rounded-2xl border p-6 flex flex-col ${plan.popular
+                  ? "border-accent bg-accent/5 shadow-lg shadow-accent/10"
+                  : "border-border/60 bg-card"
+                  }`}
               >
                 {plan.popular && (
                   <span className="text-xs font-semibold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full w-fit mb-3">
@@ -273,15 +267,16 @@ export function PricingSection() {
                   ))}
                 </ul>
 
-                <Button
-                  variant={plan.popular ? "default" : "outline"}
-                  className={`w-full rounded-full ${
-                    plan.popular ? "bg-accent text-white hover:bg-accent/90" : ""
-                  }`}
-                  asChild
+                <a
+                  href={plan.ctaLink}
+                  className={buttonVariants({
+                    variant: plan.popular ? "default" : "outline",
+                    className: `w-full rounded-full ${plan.popular ? "bg-accent text-white hover:bg-accent/90" : ""
+                      }`
+                  })}
                 >
-                  <a href={plan.ctaLink}>{plan.cta}</a>
-                </Button>
+                  {plan.cta}
+                </a>
               </motion.div>
             ))}
           </div>
