@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 
 interface GAnalyticsProps {
   measurementId?: string;
 }
 
-export function GAnalytics({ measurementId }: GAnalyticsProps) {
+function GAnalyticsInner({ measurementId }: GAnalyticsProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -38,6 +38,14 @@ export function GAnalytics({ measurementId }: GAnalyticsProps) {
   }, [measurementId, pathname, searchParams]);
 
   return null;
+}
+
+export function GAnalytics({ measurementId }: GAnalyticsProps) {
+  return (
+    <Suspense fallback={null}>
+      <GAnalyticsInner measurementId={measurementId} />
+    </Suspense>
+  );
 }
 
 // Custom event tracking
